@@ -1,21 +1,18 @@
-
 version: 2
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+  - name: customer_spend_summary
+    description: "Summary of customer spending habits and tiers."
+    columns:
+      - name: customer_id
+        description: "The unique identifier for each customer."
+        tests:
+          - unique
+          - not_null
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+      - name: customer_tier
+        description: "The spending tier assigned to the customer."
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Tier 1 / VIP', 'Tier 2 / Standard']
