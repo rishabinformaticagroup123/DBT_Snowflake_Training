@@ -37,5 +37,12 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
+# Overrides seed database destination to avoid hardcoded SNOWFLAKE_SRC errors
+seeds:
+  my_new_project:
+    +database: DEMO_DB
+    +schema: PUBLIC
+
 flags:
   require_generic_test_arguments_property: true
