@@ -42,7 +42,6 @@ models:
 seeds:
   my_new_project:
     +database: DEMO_DB
-    +schema: PUBLIC
 
 flags:
   require_generic_test_arguments_property: true
