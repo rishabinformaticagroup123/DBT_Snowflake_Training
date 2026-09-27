@@ -9,7 +9,7 @@
 WITH base_data AS (
     -- Safely reference the upstream model using the ref() macro
     SELECT 
-        id AS customer_id
+student_id AS customer_id
     FROM {{ ref('my_first_dbt_model') }}
 ),
 
