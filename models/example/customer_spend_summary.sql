@@ -18,7 +18,7 @@ transformed_data AS (
     SELECT
         customer_id,
         CASE 
-            WHEN customer_id = 1 THEN 1250.00
+            WHEN customer_id = 1 THEN 1350.00
             WHEN customer_id = 2 THEN 450.00
             ELSE 0.00 
         END AS lifetime_spend,
